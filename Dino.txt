@@ -1,0 +1,73 @@
+(setq |tyranosaure| '( (|regime| exacte "carnivore" 10)(|pied| exacte "bipède" 5)( |vitesse| exacte 40 1)))
+
+(setq |triceratops| '( (|cornes| T 10) (|regime| exacte "herbivore" 5) (|pied| exacte "quadrupede" 1)))
+
+(setq |diplodocus| '( (|longueur| exacte 30 10)  (|regime| exacte "herbivore" 5) (|cornes| nil 1)))
+
+(setq |spinosaure| '( (|epines| t 10) (|regime| exacte "carnivore" 5) (|pied| exacte "bipède" 5)))
+
+(setq |velociraptor| '( (|vitesse| exacte 60 10) (|poids| approx (0,007 0,015) 5) (|regime| exacte "carnivore" 10)))
+
+(setq |stegosaure| '( (|piques| T 10) (|epines| t 5) (|regime| exacte "herbivore" 1)))
+
+(setq |microraptor| '( (|plumes| T 10) (|vole| T 5) (|longueur| exacte 0,8 1)))
+
+(setq |pterodactyle| '( (|vole| t 10) (|regime| exacte "carnivore" 5) (|taille| exacte 2 1)))
+
+
+
+
+
+
+
+Vitesse : 
+(setf (get '|vitesse| 'type) 'numerique) 
+(setf (get '|vitesse| 'description) "La vitesse du dinosaure") 
+(setf (get '|vitesse| 'question) "A quelle vitesse pouvait se déplacer votre dinosaure ?") 
+
+Regime 
+(setf (get '|regime| 'type) 'string) 
+(setf (get '|regime| 'description) "Le regime alimentaire du dinosaure") 
+(setf (get '|regime| 'question) "Votre dinosaure était-il herbivore ou carnivore ?") 
+(setf (get '|regime| 'valeur) '("carnivore" "herbivore")) 
+
+longueur 
+(setf (get '|longueur| 'type) 'numerique) 
+(setf (get '|longueur| 'description) "La longueur du dinosaure en mètre") 
+(setf (get '|longueur| 'question) "Quelle était la longueur de votre dinosaure ?") 
+
+Poids
+(setf (get '|taille| 'type) 'numerique) 
+(setf (get '|taille| 'description) "Le poids du dinosaure en tonnes") 
+(setf (get '|taille| 'question) "Quelle était le poids de votre dinosaure ?")
+
+Vole 
+(setf (get '|vole| 'type) 'bool) 
+(setf (get '|vole| 'description) "Le dinosaure vole ou pas") 
+(setf (get '|vole| 'question) "Votre dinosaure pouvait-il voler ?")
+
+Cornes
+(setf (get '|cornes| 'type) 'bool) 
+(setf (get '|cornes| 'description) "Le dinosaure a des cornes ou pas") 
+(setf (get '|cornes| 'question) "Votre dinosaure possédait-il des cornes ?")
+
+Pieds 
+(setf (get '|pieds| 'type) 'string) 
+(setf (get '|pieds| 'description) "Le nombre de pieds du dinosaure") 
+(setf (get '|pieds| 'question) "Votre dinosaure était-il quadrupède ou bipède ?")
+(setf (get '|pieds| 'valeur) '("quadrupède" "bipède")) 
+
+|epines|
+(setf (get '|epines| 'type) 'bool) 
+(setf (get '|epines| 'description) "Epines dorsales") 
+(setf (get '|epines| 'question) "Votre dinosaure possédait il des épines dorsales ?")
+
+Piques 
+(setf (get '|piques| 'type) 'bool) 
+(setf (get '|piques| 'description) "Piques sur la queue") 
+(setf (get '|piques| 'question) "Votre dinosaure avait-il une queue pleine de piques ?")
+
+Plumes 
+(setf (get '|plumes| 'type) 'bool) 
+(setf (get '|plumes| 'description) "Plumes") 
+(setf (get '|plumes| 'question) "Votre dinosaure avait-il des plumes ?")
